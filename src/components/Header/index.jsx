@@ -5,6 +5,7 @@ function Header() {
     return (
         <>
             <NavLink to="/">Accueil</NavLink>
+            <NavLink to="/about">A propos</NavLink>
         </>
 
     )
