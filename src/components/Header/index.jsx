@@ -1,11 +1,15 @@
 import { NavLink } from 'react-router-dom'
-import './Header.css'
+import './Header.scss'
 
 function Header() {
     return (
         <>
-            <NavLink to="/">Accueil</NavLink>
-            <NavLink to="/about">A propos</NavLink>
+            <header>
+                <div className='navbar'>
+                    <NavLink to="/" className='navbar__link'>Accueil</NavLink>
+                    <NavLink to="/about" className='navbar__link'>A propos</NavLink>
+                </div>
+            </header>
         </>
 
     )

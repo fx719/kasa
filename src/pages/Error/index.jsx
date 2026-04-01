@@ -1,3 +1,5 @@
+import './Error.scss'
+
 function Error() {
     return <h1>404 Not Found</h1>
 }

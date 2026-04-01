@@ -1,3 +1,4 @@
+import './About.scss'
 
 function About() {
     return (<>

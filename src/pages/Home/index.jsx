@@ -1,4 +1,5 @@
 import accomodations from '../../assets/data/logements.json'
+import './Home.scss'
 
 function Home() {
     return (<>
