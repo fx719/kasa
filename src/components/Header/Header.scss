@@ -1,0 +1,19 @@
+header {
+    display: flex;
+    flex-direction: row;
+    flex-wrap: nowrap;
+    justify-content: space-between;
+    align-items: center;
+    padding: 1em;
+}
+
+.navbar {
+    display: flex;
+    gap: 5px;
+
+    &__link {
+        text-decoration: none;
+        color: black;
+        font-weight: 400;
+    }
+}
