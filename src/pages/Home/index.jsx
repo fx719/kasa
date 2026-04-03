@@ -3,12 +3,17 @@ import './Home.scss'
 
 function Home() {
     return (<>
-        <h1>Liste des logements disponibles</h1>
-        <ul>
+        <div className='banner'>
+            <h1 className='banner__title'>Chez vous, partout et ailleurs</h1>
+        </div>
+        <section className="accomodations">
+
             {accomodations.map((accomodation) => (
-                <li key={accomodation.id}>{accomodation.title}</li>
+                <div key={accomodation.id} className='accomodation'><h2 className='accomodation__title'>{accomodation.title}</h2></div>
             ))}
-        </ul>
+
+        </section>
+
     </>)
 }
 

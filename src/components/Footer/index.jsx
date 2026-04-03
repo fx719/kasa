@@ -1,7 +1,11 @@
 import './Footer.scss'
 
 function Footer() {
-    return <h3>Pied de page</h3>
+    return (<>
+        <footer>
+            <h3>Pied de page</h3>
+        </footer>
+    </>)
 }
 
 export default Footer

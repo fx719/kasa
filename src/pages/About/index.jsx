@@ -2,7 +2,8 @@ import './About.scss'
 
 function About() {
     return (<>
-        <h1>A propos de Kasa</h1>
+        <div className="banner">
+        </div>
     </>)
 }
 

@@ -1,0 +1,30 @@
+.accomodations {
+    display: grid;
+    grid-template-columns: repeat(3, minmax(0, 340px));
+    justify-content: center;
+    background-color: #F6F6F6;
+    border-radius: 20px;
+    margin-top: 2rem;
+    margin-bottom: 2rem;
+    width: 86%;
+    height: 100%;
+    padding: 3em;
+    gap: 1.5rem 2rem;
+}
+
+
+
+.accomodation {
+
+    max-width: 340px;
+    background: linear-gradient(to top, rgb(44, 1, 1), rgb(255, 94, 0));
+    border-radius: 5px;
+    aspect-ratio: 1/1;
+
+    &__title {
+        color: white;
+        font-size: 0.7rem;
+        margin: 0;
+
+    }
+}
