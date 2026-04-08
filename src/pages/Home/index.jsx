@@ -1,11 +1,11 @@
 import accomodations from '../../assets/data/logements.json'
+import Banner from '../../components/Banner/index.jsx'
+import homeBackgroundPicture from '../../assets/images/home/banner_background.webp'
 import './Home.scss'
 
 function Home() {
     return (<>
-        <div className='banner'>
-            <h1 className='banner__title'>Chez vous, partout et ailleurs</h1>
-        </div>
+        <Banner backgroundImageUrl={homeBackgroundPicture} bannerTitle="Chez vous, partout et ailleurs" />
         <section className="accomodations">
 
             {accomodations.map((accomodation) => (
