@@ -17,14 +17,23 @@
 .accomodation {
 
     max-width: 340px;
-    background: linear-gradient(to top, rgb(44, 1, 1), rgb(255, 94, 0));
+    background-color: rgba(66, 65, 65, 0.342);
     border-radius: 5px;
     aspect-ratio: 1/1;
+    background-position: center;
+    background-repeat: no-repeat;
+    background-blend-mode: color;
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-end;
+    flex-wrap: wrap;
+
 
     &__title {
         color: white;
-        font-size: 0.7rem;
+        font-size: 1rem;
         margin: 0;
-
+        width: 40%;
+        padding: 0.4em;
     }
 }

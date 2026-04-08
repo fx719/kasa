@@ -9,7 +9,7 @@ function Home() {
         <section className="accomodations">
 
             {accomodations.map((accomodation) => (
-                <div key={accomodation.id} className='accomodation'><h2 className='accomodation__title'>{accomodation.title}</h2></div>
+                <div key={accomodation.id} className='accomodation' style={{ backgroundImage: `url(${accomodation.cover})` }}><h2 className='accomodation__title'>{accomodation.title}</h2></div>
             ))}
 
         </section>
