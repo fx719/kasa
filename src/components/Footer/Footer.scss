@@ -1,0 +1,18 @@
+.footer {
+    background-color: black;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    padding-top: 1em;
+    padding-bottom: 1em;
+
+    &__logo {
+        margin-bottom: 1rem;
+    }
+
+    &__text {
+        color: white;
+        margin: 0;
+    }
+}
