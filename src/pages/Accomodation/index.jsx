@@ -1,10 +1,21 @@
 import accomodations from '../../assets/data/logements.json'
-import { useParams } from 'react-router-dom'
+import { useParams, Navigate } from 'react-router-dom'
 
 function Accomodation() {
-    let { accomodationId } = useParams()
-    let [visitedAccomodation] = accomodations.filter((accomodation) => accomodation.id === accomodationId)
-    return <h1>{visitedAccomodation.title}</h1>
+    try {
+        let { accomodationId } = useParams()
+        let [visitedAccomodation] = accomodations.filter((accomodation) => accomodation.id === accomodationId)
+        if (visitedAccomodation === undefined) {
+            return <Navigate to="*" />
+        } else {
+            return (<>
+                <h1>{visitedAccomodation.title}</h1>
+            </>)
+        }
+    } catch (error) {
+        console.error(error)
+    }
+
 
 }
 
