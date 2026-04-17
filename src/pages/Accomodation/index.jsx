@@ -6,13 +6,14 @@ function Accomodation() {
     try {
         const { accomodationId } = useParams()
         const [visitedAccomodation] = accomodations.filter((accomodation) => accomodation.id === accomodationId)
-        const accomodationPictures = visitedAccomodation.pictures
-        const accomodationTags = visitedAccomodation.tags
+
 
         let accomodationElementId = 0
         if (visitedAccomodation === undefined) {
             return <Navigate to="*" />
         } else {
+            const accomodationPictures = visitedAccomodation.pictures
+            const accomodationTags = visitedAccomodation.tags
             return (<div className='visitedAccomodation'>
                 <div className="visitedAccomodation__carousel">
                     {accomodationPictures.map((accomodationPicture) => (
