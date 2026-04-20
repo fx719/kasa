@@ -1,0 +1,30 @@
+.collapse {
+
+    width: 75%;
+    margin-top: 1rem;
+
+
+    &__header {
+        display: flex;
+        flex-direction: row nowrap;
+        background-color: #FF6060;
+        color: #fff;
+        justify-content: space-between;
+        padding: 0.5rem;
+        border-radius: 5px;
+
+        &__title {
+            margin: 0;
+        }
+
+        &__arrow {
+            padding-top: 1.2rem;
+        }
+    }
+
+    &__content {
+        background-color: #F6F6F673;
+        margin: 0;
+        padding: 0.5rem;
+    }
+}
