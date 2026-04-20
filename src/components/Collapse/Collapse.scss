@@ -18,7 +18,20 @@
         }
 
         &__arrow {
-            padding-top: 1.2rem;
+            margin-top: 1.2rem;
+            color: rgb(255, 255, 255);
+
+            &--opening {
+                transform: rotate(-180deg);
+                transition: transform 1s;
+                transform-origin: 50% 30%;
+            }
+
+            &--closing {
+                transform: rotate(0deg);
+                transition: transform 1s, margin-top 1s;
+                margin-top: 1.2rem;
+            }
         }
     }
 
@@ -27,4 +40,8 @@
         margin: 0;
         padding: 0.5rem;
     }
+
+
+
+
 }
