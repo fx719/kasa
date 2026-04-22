@@ -17,8 +17,8 @@ header {
         font-weight: 400;
     }
 
-    &__link:focus {
-        text-decoration: underline;
+    &__link.active {
+        border-bottom: 2px solid black;
     }
 
 }
