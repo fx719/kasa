@@ -36,13 +36,17 @@
         }
     }
 
-    &__content {
+    &__content--paragraph {
         background-color: #F6F6F673;
         margin: 0;
         padding: 0.5rem;
     }
 
-
+    &__content--list {
+        background-color: #F6F6F673;
+        margin: 0;
+        padding: 0.5rem;
+    }
 
 
 }
