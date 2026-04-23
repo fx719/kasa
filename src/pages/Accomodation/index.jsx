@@ -2,6 +2,7 @@ import accomodations from '../../assets/data/logements.json'
 import { useParams, Navigate } from 'react-router-dom'
 import './Accomodation.scss'
 import Collapse from '../../components/Collapse/index.jsx'
+import SlideShow from '../../components/SlideShow/index.jsx'
 
 function Accomodation() {
     try {
@@ -15,12 +16,9 @@ function Accomodation() {
         } else {
             const accomodationPictures = visitedAccomodation.pictures
             const accomodationTags = visitedAccomodation.tags
+
             return (<div className='visitedAccomodation'>
-                <div className="visitedAccomodation__carousel">
-                    {accomodationPictures.map((accomodationPicture) => (
-                        <img key={accomodationElementId++} src={accomodationPicture} className='visitedAccomodation__carousel__picture' />
-                    ))}
-                </div>
+                <SlideShow currentBackgroundImg={accomodationPictures} numberOfPictures={accomodationPictures.length} />
                 <div className="visitedAccomodation__introduction">
                     <h1 className='visitedAccomodation__title' >{visitedAccomodation.title}</h1>
                     <p className='visitedAccomodation__location'>{visitedAccomodation.location}</p>
