@@ -3,6 +3,7 @@ import { useParams, Navigate } from 'react-router-dom'
 import './Accomodation.scss'
 import Collapse from '../../components/Collapse/index.jsx'
 import SlideShow from '../../components/SlideShow/index.jsx'
+import Ratings from '../../components/Ratings/index.jsx'
 
 function Accomodation() {
     try {
@@ -33,8 +34,8 @@ function Accomodation() {
                     <p className='visitedAccomodation__host__name'>{visitedAccomodation.host.name}</p>
                     <img className='visitedAccomodation_host__avatar' src={visitedAccomodation.host.picture} alt={`avatar de ${visitedAccomodation.host.name}`} />
                 </div>
-                <div className="visitedAccomodation__rating">
-                    <p>Insérer nombre d'étoiles correspondant à {visitedAccomodation.rating}</p>
+                <div className="visitedAccomodation__ratings">
+                    <Ratings rating={visitedAccomodation.rating} />
                 </div>
                 <div className="visitedAccomodation__description">
                     <Collapse isMediumSized contentIsParagraph collapseTitle="Description" collapseContent={visitedAccomodation.description} />
