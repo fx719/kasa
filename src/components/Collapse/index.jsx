@@ -16,7 +16,7 @@ import { useState } from 'react'
  * @returns {JSX.Element}
  */
 
-function Collapse({ isMediumSized, contentIsParagraph, contentIsList, collapseTitle, collapseContent }) {
+function Collapse({ isInAGrid, contentIsParagraph, contentIsList, collapseTitle, collapseContent }) {
 
     //Collapse menu is closed on page's loading
     const [isOpen, setIsOpen] = useState(false)
@@ -35,7 +35,7 @@ function Collapse({ isMediumSized, contentIsParagraph, contentIsList, collapseTi
 
 
     return (
-        <div className='collapse' style={isMediumSized && { width: "30%" }}>
+        <div className='collapse' style={isInAGrid && { width: "90%" }}>
             <div className="collapse__header">
                 <h2 className='collapse__header__title'>{collapseTitle}</h2>
                 <i className="fa-solid fa-angle-up fa-2xl collapse__header__arrow" onClick={(e) => handleCollapse(e)}></i>

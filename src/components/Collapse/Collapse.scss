@@ -39,16 +39,17 @@
     &__content__paragraph {
         background-color: #F6F6F673;
         margin: 0;
-        padding-left: 0.5rem;
-        padding-right: 0.5rem;
-        padding-bottom: 0.5rem;
 
         &--opening {
 
             display: block;
             transition: padding-top 0.2s ease;
             padding-top: 0.6rem;
-            margin: 0;
+            margin-bottom: 1rem;
+            padding-left: 0.5rem;
+            padding-right: 0.5rem;
+            padding-bottom: 0.5rem;
+
 
             @starting-style {
                 padding-top: 0;
@@ -66,9 +67,7 @@
     &__content__list {
         background-color: #F6F6F673;
         margin: 0;
-        padding-left: 0.5rem;
-        padding-right: 0.5rem;
-        padding-bottom: 0.5rem;
+
 
         &--opening {
 
@@ -76,6 +75,9 @@
             transition: padding-top 0.2s ease;
             padding-top: 0.6rem;
             margin: 0;
+            padding-left: 0.5rem;
+            padding-right: 0.5rem;
+            padding-bottom: 0.5rem;
 
             @starting-style {
                 padding-top: 0;
@@ -86,6 +88,13 @@
 
         &--closing {
             display: none;
+            padding-top: 0;
+            transition: padding-top 0.2s ease;
+
+            @starting-style {
+                padding-top: 0.6rem;
+
+            }
         }
     }
 

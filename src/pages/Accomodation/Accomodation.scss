@@ -1,6 +1,97 @@
 .visitedAccomodation {
+
     width: 90%;
     display: flex;
     flex-direction: column;
 
+    &__introduction {
+        &__title {
+            color: #FF6060;
+            width: 100%;
+            margin: 0;
+        }
+
+        &__location {
+            color: black;
+            font-weight: 450;
+            font-size: 1rem;
+            margin: 0;
+        }
+
+    }
+
+    &__tags {
+        display: flex;
+        flex-direction: row;
+        flex-wrap: nowrap;
+        gap: 0.2rem;
+        height: 70%;
+
+        &__tag {
+            background-color: #FF6060;
+            color: white;
+            border-radius: 15px;
+            padding: 0.2em 1em 0.2em 1em;
+            font-weight: 700;
+            max-height: 24px;
+        }
+    }
+
+    &__host {
+        display: flex;
+        flex-direction: row;
+        flex-wrap: nowrap;
+        width: 100%;
+        margin-bottom: 1rem;
+        justify-content: flex-end;
+        gap: 0.1rem;
+        padding-right: 1rem;
+
+
+        &__name {
+            color: #FF6060;
+            font-size: 1.1rem;
+            text-wrap: wrap;
+            width: 15%;
+            padding: 0.5rem 0 0.5rem 0;
+            max-height: 50%;
+            margin: 0;
+        }
+
+        &__avatar {
+            border-radius: 100px;
+            aspect-ratio: 1/1;
+            max-height: 64px;
+
+        }
+    }
+
+    &__ratings {
+        display: flex;
+        justify-content: flex-end;
+        padding-right: 1rem;
+        padding-top: 1rem;
+    }
+
+    &__equipment {
+        display: flex;
+        justify-content: flex-end;
+    }
+
+
+
+}
+
+
+.presentation {
+    margin-top: 1rem;
+    margin-bottom: 1rem;
+    display: grid;
+    grid-template-columns: repeat(2, 50%);
+    grid-template-rows: repeat(3, 1fr);
+    gap: 1rem;
+}
+
+li {
+    list-style: none;
 }
