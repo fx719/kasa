@@ -12,7 +12,7 @@ import { useState } from 'react'
  * @param {boolean} props.contentIsList
  * @param {string} props.collapseTitle
  * @param {string | string[]} props.collapseContent   If contentIsParagraph, then content type is a string. 
- * If contentIsList, then it's  a strings' array that you have to map on, to display each <li></li> corresponding element.
+ * If contentIsList, then it's an array of strings that you have to map on, to display each <li></li> corresponding element.
  * @returns {JSX.Element}
  */
 
@@ -40,8 +40,8 @@ function Collapse({ isMediumSized, contentIsParagraph, contentIsList, collapseTi
                 <h2 className='collapse__header__title'>{collapseTitle}</h2>
                 <i className="fa-solid fa-angle-up fa-2xl collapse__header__arrow" onClick={(e) => handleCollapse(e)}></i>
             </div>
-            {contentIsParagraph && <p className='collapse__content--paragraph' style={isOpen ? { display: "block" } : { display: "none" }} >{collapseContent}</p>}
-            {contentIsList && <ul className='collapse__content--list' style={isOpen ? { display: "block" } : { display: "none" }}>{collapseContent}</ul>}
+            {contentIsParagraph && <p className={isOpen ? 'collapse__content__paragraph--opening' : 'collapse__content__paragraph--closing'}  >{collapseContent}</p>}
+            {contentIsList && <ul className={isOpen ? 'collapse__content__list--opening' : 'collapse__content__list--closing'} >{collapseContent}</ul>}
         </div>
     )
 }
