@@ -1,10 +1,13 @@
 .visitedAccomodation {
-
+    //note du 24 04 2026 : gérer les espacements entre els éléments de la grille, le déclenchement de l'animation du collapse augmente énormément la taille de tous els celles
+    //de la grille, faire en sorte que seule la taille des cellules cotnenant les collapse augmetne mais pas les autres (bonen  piste:max-height)
     width: 90%;
     display: flex;
     flex-direction: column;
 
     &__introduction {
+        max-height: 100px;
+
         &__title {
             color: #FF6060;
             width: 100%;
@@ -25,7 +28,7 @@
         flex-direction: row;
         flex-wrap: nowrap;
         gap: 0.2rem;
-        height: 70%;
+        max-height: 57.38px;
 
         &__tag {
             background-color: #FF6060;
@@ -33,7 +36,7 @@
             border-radius: 15px;
             padding: 0.2em 1em 0.2em 1em;
             font-weight: 700;
-            max-height: 24px;
+            max-height: 30px;
         }
     }
 
@@ -76,6 +79,7 @@
     &__equipment {
         display: flex;
         justify-content: flex-end;
+        margin-top: 0;
     }
 
 
@@ -84,6 +88,7 @@
 
 
 .presentation {
+    max-height: 350px;
     margin-top: 1rem;
     margin-bottom: 1rem;
     display: grid;
