@@ -40,7 +40,7 @@ function Collapse({ isInAGrid, contentIsParagraph, contentIsList, collapseTitle,
                 <h2 className='collapse__header__title'>{collapseTitle}</h2>
                 <i className="fa-solid fa-angle-up fa-2xl collapse__header__arrow" onClick={(e) => handleCollapse(e)}></i>
             </div>
-            {contentIsParagraph && <p className={isOpen ? 'collapse__content__paragraph--opening' : 'collapse__content__paragraph--closing'}  >{collapseContent}</p>}
+            {contentIsParagraph && <p className={isOpen ? 'collapse__content__paragraph--opening' : 'collapse__content__paragraph--closing'} >{collapseContent}</p>}
             {contentIsList && <ul className={isOpen ? 'collapse__content__list--opening' : 'collapse__content__list--closing'} >{collapseContent}</ul>}
         </div>
     )
