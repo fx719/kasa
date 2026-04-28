@@ -5,11 +5,37 @@ header {
     justify-content: space-between;
     align-items: center;
     padding: 1em;
+    margin-inline: auto;
+    width: 86%;
+    box-sizing: border-box;
+
+    @media(max-width:340px) {
+        padding: 0;
+        width: 70%;
+    }
+
 }
+
+header img {
+    @media(max-width:550px) {
+        width: 30%;
+    }
+
+    @media(max-width:340px) {
+        width: 20%;
+    }
+}
+
 
 .navbar {
     display: flex;
     gap: 5px;
+
+    @media(max-width:340px) {
+        font-size: 0.8rem;
+    }
+
+
 
     &__link {
         text-decoration: none;

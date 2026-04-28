@@ -6,12 +6,15 @@ import Footer from '../Footer'
 
 function Layout() {
     return (<>
-        <Header />
-        <main>
-            <Outlet />
-        </main>
+        <div className='container'>
+            <Header />
+            <main>
+                <Outlet />
+            </main>
+        </div>
         <Footer />
-    </>)
+    </>
+    )
 }
 
 export default Layout
