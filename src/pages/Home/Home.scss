@@ -10,4 +10,12 @@
     height: 100%;
     padding: 3em;
     gap: 1.5rem 2rem;
+
+    @media(max-width:800px) {
+        grid-template-columns: 1fr;
+        background-color: white;
+        margin-top: 0;
+        padding: 0;
+    }
+
 }
