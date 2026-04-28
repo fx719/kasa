@@ -8,6 +8,10 @@
     padding-bottom: 1em;
     width: 100%;
 
+    @media(max-width:600px) {
+        min-height: 250px;
+    }
+
     &__logo {
         margin-bottom: 1rem;
     }

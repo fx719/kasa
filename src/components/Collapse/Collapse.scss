@@ -3,6 +3,9 @@
     width: 75%;
     margin-bottom: 1rem;
 
+    @media(max-width:800px) {
+        width: 86%;
+    }
 
     &__header {
         display: flex;
