@@ -3,20 +3,41 @@
     flex-direction: column;
     justify-content: space-evenly;
     align-items: center;
-    font-size: 36px;
+    font-size: 2.25rem;
     width: 100%;
     color: #FF6060;
     margin-top: 1rem;
     margin-bottom: 2rem;
+
+    @media(max-width:860px) {
+        width: 90%;
+        font-size: 2rem;
+    }
+
+    @media(max-width:505px) {
+        font-size: 1.5rem;
+    }
+
+    @media(max-width:380px) {
+        width: 75%;
+        font-size: 1.2rem;
+    }
+
 
     &__title {
         font-size: 7em;
         margin: 0;
     }
 
+    &__text {
+        @media(max-width:860px) {
+            text-align: center;
+        }
+    }
+
     &__link {
         text-decoration: underline;
         color: black;
-        font-size: 0.5em;
+        font-size: 0.7em;
     }
 }
