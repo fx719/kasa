@@ -1,5 +1,6 @@
 import './Collapse.scss'
-import { useState } from 'react'
+import { useEffect, useState } from 'react'
+import { useOutletContext } from 'react-router-dom'
 
 /**
  * Collapse component that displays content when clicked, and hides it again when clicked a second time.
@@ -7,7 +8,7 @@ import { useState } from 'react'
  * 
  * @component
  * @param {Object} props
- * @param {boolean} props.isMediumSized Normal width is 75% of parent element, medium width is 30%.
+ * @param {boolean} props.isCollapseSibling if the collapse is aligned with an other one.
  * @param {boolean} props.contentIsParagraph
  * @param {boolean} props.contentIsList
  * @param {string} props.collapseTitle
@@ -16,10 +17,11 @@ import { useState } from 'react'
  * @returns {JSX.Element}
  */
 
-function Collapse({ isInAGrid, contentIsParagraph, contentIsList, collapseTitle, collapseContent }) {
+function Collapse({ isCollapseSibling, contentIsParagraph, contentIsList, collapseTitle, collapseContent }) {
 
     //Collapse menu is closed on page's loading
     const [isOpen, setIsOpen] = useState(false)
+    const [isMobileWidth, setIsMobileWidth] = useOutletContext()
 
     const handleCollapse = (e) => {
         setIsOpen(!isOpen)
@@ -35,7 +37,7 @@ function Collapse({ isInAGrid, contentIsParagraph, contentIsList, collapseTitle,
 
 
     return (
-        <div className='collapse' style={isInAGrid && { width: "90%" }}>
+        <div className='collapse' style={(isCollapseSibling & isMobileWidth) ? { width: "100%" } : isCollapseSibling ? { width: "90%" } : isMobileWidth ? { width: "86%" } : { width: "75%" }}>
             <div className="collapse__header">
                 <h2 className='collapse__header__title'>{collapseTitle}</h2>
                 <i className="fa-solid fa-angle-up fa-2xl collapse__header__arrow" onClick={(e) => handleCollapse(e)}></i>

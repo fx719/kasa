@@ -1,11 +1,6 @@
 .collapse {
 
-    width: 75%;
     margin-bottom: 1rem;
-
-    @media(max-width:800px) {
-        width: 86%;
-    }
 
     &__header {
         display: flex;
@@ -50,6 +45,7 @@
         &--opening {
 
             display: block;
+            visibility: visible;
             transition: padding-top 0.2s ease;
             padding-top: 0.6rem;
             margin-bottom: 1rem;
@@ -73,7 +69,8 @@
             margin-bottom: 0.5rem;
             height: 0;
             padding-top: 0;
-            transition: opacity 0.2s, margin-top 0.2s, height 0.2s, padding-top 0.2s;
+            transition: opacity 0.2s, margin-top 0.2s, height 0.2s, padding-top 0.2s, visibility 0.2s 0.5s;
+            visibility: hidden;
 
         }
 

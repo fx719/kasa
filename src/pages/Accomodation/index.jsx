@@ -1,5 +1,6 @@
 import accomodations from '../../assets/data/logements.json'
 import { useParams, Navigate } from 'react-router-dom'
+import { useState, useEffect } from 'react'
 import './Accomodation.scss'
 import Collapse from '../../components/Collapse/index.jsx'
 import SlideShow from '../../components/SlideShow/index.jsx'
@@ -9,6 +10,7 @@ function Accomodation() {
     try {
         const { accomodationId } = useParams()
         const [visitedAccomodation] = accomodations.filter((accomodation) => accomodation.id === accomodationId)
+
 
 
         let accomodationElementId = 0
@@ -43,10 +45,10 @@ function Accomodation() {
                         </div>
                     </div>
                     <div className="visitedAccomodation__description">
-                        <Collapse isInAGrid contentIsParagraph collapseTitle="Description" collapseContent={visitedAccomodation.description} />
+                        <Collapse isCollapseSibling contentIsParagraph collapseTitle="Description" collapseContent={visitedAccomodation.description} />
                     </div>
                     <div className="visitedAccomodation__equipment">
-                        <Collapse isInAGrid contentIsList collapseTitle="Equipements" collapseContent={visitedAccomodation.equipments.map((equipment) => (<li key={accomodationElementId++}>{equipment}</li>))} />
+                        <Collapse isCollapseSibling contentIsList collapseTitle="Equipements" collapseContent={visitedAccomodation.equipments.map((equipment) => (<li key={accomodationElementId++}>{equipment}</li>))} />
                     </div>
                 </section>
 

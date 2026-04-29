@@ -8,9 +8,13 @@
     padding-bottom: 1em;
     width: 100%;
 
+
+    @media(max-width:800px) {
+        min-height: 250px;
+    }
+
     @media(max-width:600px) {
         min-height: 250px;
-        // padding: 0;
     }
 
     &__logo {
