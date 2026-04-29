@@ -1,6 +1,4 @@
 .visitedAccomodation {
-    //note du 24 04 2026 : gérer les espacements entre els éléments de la grille, le déclenchement de l'animation du collapse augmente énormément la taille de tous els celles
-    //de la grille, faire en sorte que seule la taille des cellules cotnenant les collapse augmetne mais pas les autres (bonen  piste:max-height)
     width: 90%;
     display: flex;
     flex-direction: column;
@@ -12,6 +10,16 @@
             color: #FF6060;
             width: 100%;
             margin: 0;
+
+            @media(max-width:985px) {
+                font-size: 1.8rem;
+            }
+
+
+            @media(max-width:885px) {
+                font-size: 1.6rem;
+            }
+
         }
 
         &__location {
@@ -26,9 +34,14 @@
     &__tags {
         display: flex;
         flex-direction: row;
-        flex-wrap: nowrap;
-        gap: 0.2rem;
+        flex-wrap: wrap;
+        gap: 0px 0.2rem;
         max-height: 57.38px;
+
+
+        @media(max-width:1360px) {
+            max-height: 100px;
+        }
 
         &__tag {
             background-color: #FF6060;
@@ -37,6 +50,10 @@
             padding: 0.2em 1em 0.2em 1em;
             font-weight: 700;
             max-height: 30px;
+            text-wrap: nowrap;
+            margin-bottom: 0.1em;
+            margin-top: 0;
+
         }
     }
 
@@ -47,9 +64,23 @@
         width: 100%;
         margin-bottom: 1rem;
         justify-content: flex-end;
-        gap: 0.1rem;
         padding-right: 1rem;
 
+        @media(max-width:1444px) {
+            gap: 1.2em;
+        }
+
+        @media(max-width:1071px) {
+            gap: 1.4em;
+        }
+
+        @media(max-width:1009px) {
+            gap: 2em;
+        }
+
+        @media(max-width:870px) {
+            gap: 2.4em;
+        }
 
         &__name {
             color: #FF6060;
