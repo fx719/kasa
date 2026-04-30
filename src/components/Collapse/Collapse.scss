@@ -1,3 +1,29 @@
+@mixin opening-collapse-content {
+    display: block;
+    visibility: visible;
+    transition: padding-top 0.2s ease;
+    padding-top: 0.6rem;
+    margin-bottom: 1rem;
+    padding-left: 0.5rem;
+    padding-right: 0.5rem;
+    padding-bottom: 0.5rem;
+    background-color: #F6F6F673;
+    margin-top: 0;
+}
+
+
+@mixin closing-collapse-content {
+    opacity: 0;
+    margin-top: 0;
+    margin-bottom: 0.5rem;
+    height: 0;
+    padding-top: 0;
+    transition: opacity 0.5s, margin-top 0.5s, height 0.5s, padding-top 0.5s, visibility 0.2s 0.7s;
+    visibility: hidden;
+}
+
+
+
 .collapse {
 
     margin-bottom: 1rem;
@@ -40,72 +66,24 @@
 
     &__content__paragraph {
 
-
-
         &--opening {
-
-            display: block;
-            visibility: visible;
-            transition: padding-top 0.2s ease;
-            padding-top: 0.6rem;
-            margin-bottom: 1rem;
-            padding-left: 0.5rem;
-            padding-right: 0.5rem;
-            padding-bottom: 0.5rem;
-            background-color: #F6F6F673;
-            margin-top: 0;
-
-            @starting-style {
-                padding-top: 0;
-
-            }
-
+            @include opening-collapse-content()
         }
 
         &--closing {
-
-            opacity: 0;
-            margin-top: 0;
-            margin-bottom: 0.5rem;
-            height: 0;
-            padding-top: 0;
-            transition: opacity 0.5s, margin-top 0.5s, height 0.5s, padding-top 0.5s, visibility 0.2s 0.7s;
-            visibility: hidden;
-
+            @include closing-collapse-content()
         }
 
     }
 
     &__content__list {
-        background-color: #F6F6F673;
-        margin: 0;
-
 
         &--opening {
-
-            display: block;
-            transition: padding-top 0.2s ease;
-            padding-top: 0.6rem;
-            margin-top: 0;
-            padding-left: 0.5rem;
-            padding-right: 0.5rem;
-            padding-bottom: 0.5rem;
-            background-color: #F6F6F673;
-
-            @starting-style {
-                padding-top: 0;
-
-            }
-
+            @include opening-collapse-content()
         }
 
         &--closing {
-            opacity: 0;
-            margin-top: 0;
-            margin-bottom: 0.5rem;
-            height: 0;
-            padding-top: 0;
-            transition: opacity 0.2s, margin-top 0.2s, height 0.2s, padding-top 0.2s;
+            @include closing-collapse-content()
         }
     }
 
