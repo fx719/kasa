@@ -1,3 +1,11 @@
+@mixin slideshow-arrow {
+    color: #fff;
+    background: none;
+    border: none;
+    font-size: 2rem;
+    padding: 0;
+}
+
 .slideShow {
     width: 100%;
     height: auto;
@@ -19,20 +27,11 @@
         width: 100%;
 
         &--left {
-            color: #fff;
-            background: none;
-            border: none;
-            font-size: 2rem;
-            padding: 0;
+            @include slideshow-arrow()
         }
 
         &--right {
-            color: #fff;
-            background: none;
-            border: none;
-            font-size: 2rem;
-            padding: 0;
-
+            @include slideshow-arrow()
         }
     }
 
