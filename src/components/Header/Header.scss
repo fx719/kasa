@@ -9,6 +9,13 @@ header {
     width: 86%;
     box-sizing: border-box;
 
+    @media(max-width:800px) {
+        padding-left: 0;
+        padding-right: 0;
+        justify-content: space-around;
+        margin-inline: 0;
+    }
+
     @media(max-width:340px) {
         padding: 0;
         width: 70%;
@@ -29,7 +36,12 @@ header img {
 
 .navbar {
     display: flex;
-    gap: 5px;
+    gap: 1.5em;
+
+    @media(max-width:800px) {
+        align-items: center;
+
+    }
 
     @media(max-width:340px) {
         font-size: 0.8rem;
@@ -40,7 +52,20 @@ header img {
     &__link {
         text-decoration: none;
         color: black;
-        font-weight: 400;
+        font-weight: 600;
+        font-size: 1.5rem;
+
+        @media(max-width:800px) {
+            font-weight: 400;
+        }
+
+        @media(max-width:570px) {
+            font-size: 1.2rem;
+        }
+
+        @media(max-width:353px) {
+            font-size: 1rem;
+        }
     }
 
     &__link.active {
