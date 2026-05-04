@@ -8,7 +8,7 @@ import { useOutletContext } from 'react-router-dom'
  * 
  * @component
  * @param {Object} props
- * @param {boolean} props.isCollapseSibling if the collapse is aligned with an other one.
+ * @param {boolean} props.isNextToACollapse if the collapse is aligned with an other one.
  * @param {boolean} props.contentIsParagraph
  * @param {boolean} props.contentIsList
  * @param {string} props.collapseTitle
@@ -17,7 +17,7 @@ import { useOutletContext } from 'react-router-dom'
  * @returns {JSX.Element}
  */
 
-function Collapse({ isCollapseSibling, contentIsParagraph, contentIsList, collapseTitle, collapseContent }) {
+function Collapse({ isNextToACollapse, contentIsParagraph, contentIsList, collapseTitle, collapseContent }) {
 
     //Collapse menu is closed on page's loading
     const [isOpen, setIsOpen] = useState(false)
@@ -37,7 +37,7 @@ function Collapse({ isCollapseSibling, contentIsParagraph, contentIsList, collap
 
 
     return (
-        <div className='collapse' style={(isCollapseSibling & isMobileWidth) ? { width: "100%" } : isCollapseSibling ? { width: "90%" } : isMobileWidth ? { width: "86%" } : { width: "75%" }}>
+        <div className='collapse' style={(isNextToACollapse & isMobileWidth) ? { width: "100%" } : isNextToACollapse ? { width: "90%" } : isMobileWidth ? { width: "86%" } : { width: "75%" }}>
             <div className="collapse__header">
                 <h2 className='collapse__header__title'>{collapseTitle}</h2>
                 <i className="fa-solid fa-angle-up fa-2xl collapse__header__arrow" onClick={(e) => handleCollapse(e)}></i>

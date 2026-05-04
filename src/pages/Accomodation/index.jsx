@@ -1,6 +1,5 @@
 import accomodations from '../../assets/data/logements.json'
 import { useParams, Navigate } from 'react-router-dom'
-import { useState, useEffect } from 'react'
 import './Accomodation.scss'
 import Collapse from '../../components/Collapse/index.jsx'
 import SlideShow from '../../components/SlideShow/index.jsx'
@@ -45,10 +44,10 @@ function Accomodation() {
                         </div>
                     </div>
                     <div className="visitedAccomodation__description">
-                        <Collapse isCollapseSibling contentIsParagraph collapseTitle="Description" collapseContent={visitedAccomodation.description} />
+                        <Collapse isNextToACollapse contentIsParagraph collapseTitle="Description" collapseContent={visitedAccomodation.description} />
                     </div>
                     <div className="visitedAccomodation__equipment">
-                        <Collapse isCollapseSibling contentIsList collapseTitle="Equipements" collapseContent={visitedAccomodation.equipments.map((equipment) => (<li key={accomodationElementId++}>{equipment}</li>))} />
+                        <Collapse isNextToACollapse contentIsList collapseTitle="Equipements" collapseContent={visitedAccomodation.equipments.map((equipment) => (<li key={accomodationElementId++}>{equipment}</li>))} />
                     </div>
                 </section>
 
