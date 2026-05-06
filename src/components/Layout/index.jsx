@@ -27,7 +27,7 @@ function Layout() {
         return (() => {
             window.removeEventListener("resize", handleWindowResize)
         })
-    }, [])
+    }, [isMobileWidth])
 
     return (<>
         <div className='container'>
